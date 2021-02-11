@@ -9,3 +9,11 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+  my_second_job:
+    name: Hello world action 2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-b
+        with:
+          MY_NAME: "Mona"
